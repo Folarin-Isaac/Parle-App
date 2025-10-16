@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parle_app/ui/auth/register_screen.dart';
 import 'package:parle_app/ui/auth/widgets/auth.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -56,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Gap(AppSizes.size24),
                 CustomTextField(
                   label: AppStrings.password,
-                  hintText: '••••••••••••',
+                  hintText: '',
                   controller: _passwordController,
                   isPassword: true,
                   validator: FormHelper.validatePassword,
@@ -158,7 +159,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             color: theme.colorScheme.primary,
                             fontWeight: FontWeight.bold,
                           ),
-                          recognizer: TapGestureRecognizer()..onTap = () {},
+                          recognizer: TapGestureRecognizer()..onTap = () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const RegisterScreen(),
+                              ));
+                          },
                         ),
                       ],
                     ),

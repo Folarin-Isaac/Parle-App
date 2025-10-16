@@ -17,16 +17,18 @@ class AppStrings {
   static const String logIn = 'LOG IN';
   static const String logInHint = 'example123@gmail.com';
   static const String or = 'OR';
-  static const String dontHaveAccount = "Don't have an account?";
-  static const String signUp = ' SIGN UP';
+  static const String dontHaveAccount = "Don't have an account? ";
+  static const String signUp = 'SIGN UP';
 
   // Sign Up Screen
   static const String welcomeToParle = 'Welcome to Parle';
-  static const String welcomeMessage = 'We are excited you took interest in TTRED in GDI';
+  static const String welcomeMessage = 'It’s time to take your first step to LETTING IT GO!';
   static const String confirmPassword = 'Confirm Password';
   static const String createAccount = 'CREATE ACCOUNT';
-  static const String alreadyHaveAccount = 'Already have an account?';
+  static const String alreadyHaveAccount = 'Already have an account? ';
   static const String signIn = 'SIGN IN';
+  static const String userName = 'Username  (This name appears if you check the anonymous button)';
+
 
   // Personal Details Screen
   static const String personalDetails = 'Personal Details';
