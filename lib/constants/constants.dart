@@ -30,6 +30,10 @@ class ErrorText {
   static const String passwordRequired = 'Password is required';
   static const String emailInvalid = 'Enter a valid email address';
   static const String passwordTooShort = 'Password must be at least 6 characters';
+  static const String confirmPassword = 'Please confirm your password';
+  static const String passwordMismatch = 'Passwords do not match';
+  static const String fullNameLeast = 'Full name must be at least 2 characters';
+  static const String fullNameRequired = 'Full name is required';
 
   // General errors
   static const String somethingWentWrong = 'Something went wrong';

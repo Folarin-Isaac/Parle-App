@@ -76,7 +76,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   validator: FormHelper.validateEmail,
                 ),
                 Gap(AppSizes.size24),
-                // Username Field
                 CustomTextField(
                   label: AppStrings.userName,
                   hintText: '',
@@ -87,7 +86,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Gap(AppSizes.size24),
                 CustomTextField(
                   label: AppStrings.password,
-                  hintText: '••••••••••••',
+                  hintText: '',
                   controller: _passwordController,
                   isPassword: true,
                   validator: FormHelper.validatePassword,
@@ -129,7 +128,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ],
                 ),
                 Gap(AppSizes.size24),
-
                 PrimaryButton(
                   text: AppStrings.createAccount,
                   onPressed: () {
@@ -138,8 +136,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   },
                 ),
                 Gap(AppSizes.size24),
-
-                // OR Divider
                 Row(
                   children: [
                     Expanded(child: Divider(color: theme.dividerTheme.color)),

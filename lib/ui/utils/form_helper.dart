@@ -33,11 +33,11 @@ class FormHelper {
     required String originalPassword,
   }) {
     if (confirmPassword == null || confirmPassword.isEmpty) {
-      return 'Please confirm your password';
+      return ErrorText.confirmPassword;
     }
 
     if (confirmPassword != originalPassword) {
-      return 'Passwords do not match';
+      return ErrorText.passwordMismatch;
     }
 
     return null;
@@ -45,11 +45,11 @@ class FormHelper {
 
   static String? validateFullName(String? fullName) {
     if (fullName == null || fullName.isEmpty) {
-      return 'Full name is required';
+      return ErrorText.fullNameRequired;
     }
 
     if (fullName.length < 2) {
-      return 'Full name must be at least 2 characters';
+      return ErrorText.fullNameLeast;
     }
 
     return null;
