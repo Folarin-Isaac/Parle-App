@@ -1,6 +1,7 @@
 import 'package:parle_app/constants/constants.dart';
 
 class FormHelper {
+  FormHelper._();
 
   static String? validateEmail(String? email) {
     if (email == null || email.isEmpty) {
@@ -17,11 +18,55 @@ class FormHelper {
 
   static String? validatePassword(String? password) {
     if (password == null || password.isEmpty) {
-      return 'Password is required';
+      return ErrorText.passwordRequired;
     }
 
     if (password.length < 6) {
-      return 'Password must be at least 6 characters';
+      return ErrorText.passwordTooShort;
+    }
+
+    return null;
+  }
+
+  static String? validateConfirmPassword({
+    required String? confirmPassword,
+    required String originalPassword,
+  }) {
+    if (confirmPassword == null || confirmPassword.isEmpty) {
+      return 'Please confirm your password';
+    }
+
+    if (confirmPassword != originalPassword) {
+      return 'Passwords do not match';
+    }
+
+    return null;
+  }
+
+  static String? validateFullName(String? fullName) {
+    if (fullName == null || fullName.isEmpty) {
+      return 'Full name is required';
+    }
+
+    if (fullName.length < 2) {
+      return 'Full name must be at least 2 characters';
+    }
+
+    return null;
+  }
+
+  static String? validateUsername(String? username) {
+    if (username == null || username.isEmpty) {
+      return 'Username is required';
+    }
+
+    if (username.length < 3) {
+      return 'Username must be at least 3 characters';
+    }
+
+    final usernameRegex = RegExp(r'^[a-zA-Z0-9_]+$');
+    if (!usernameRegex.hasMatch(username)) {
+      return 'Username can only contain letters, numbers, and underscores';
     }
 
     return null;

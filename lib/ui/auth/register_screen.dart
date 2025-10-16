@@ -10,14 +10,23 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
+
+  final _fullNameController = TextEditingController();
   final _emailController = TextEditingController();
+  final _userNameController = TextEditingController();
   final _passwordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
+  late TapGestureRecognizer _signInTapRecognizer;
   bool _remainAnonymous = false;
 
   @override
   void dispose() {
+    _fullNameController.dispose();
     _emailController.dispose();
+    _userNameController.dispose();
     _passwordController.dispose();
+    _confirmPasswordController.dispose();
+    _signInTapRecognizer.dispose();
     super.dispose();
   }
 
@@ -31,17 +40,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(
-            horizontal: AppSizes.size20,
-            vertical: AppSizes.size10,
+            horizontal: AppSizes.size24,
           ),
           child: Form(
             key: _formKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Gap(AppSizes.size30),
+                Gap(AppSizes.size40),
                 const AppLogo(),
-                Gap(AppSizes.size30),
+                Gap(AppSizes.size64),
                 Text(
                   AppStrings.welcomeToParle,
                   style: theme.textTheme.displaySmall,
@@ -51,45 +59,49 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   AppStrings.welcomeMessage,
                   style: theme.textTheme.bodyMedium,
                 ),
-                Gap(AppSizes.size30),
+                Gap(AppSizes.size40),
                 CustomTextField(
                   label: AppStrings.fullName,
-                  hintText: AppStrings.logInHint,
-                  controller: _emailController,
-                  keyboardType: TextInputType.emailAddress,
-                  validator: FormHelper.validateEmail,
+                  hintText: '',
+                  controller: _fullNameController,
+                  keyboardType: TextInputType.name,
+                  validator: FormHelper.validateFullName
                 ),
-                Gap(AppSizes.size18),
+                Gap(AppSizes.size24),
                 CustomTextField(
                   label: AppStrings.email,
-                  hintText: AppStrings.logInHint,
+                  hintText: '',
                   controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
                   validator: FormHelper.validateEmail,
                 ),
-                Gap(AppSizes.size18),
+                Gap(AppSizes.size24),
+                // Username Field
                 CustomTextField(
                   label: AppStrings.userName,
-                  hintText: AppStrings.logInHint,
-                  controller: _emailController,
-                  keyboardType: TextInputType.emailAddress,
-                  validator: FormHelper.validateEmail,
+                  hintText: '',
+                  controller: _userNameController,
+                  keyboardType: TextInputType.text,
+                  validator: FormHelper.validateUsername,
                 ),
-                Gap(AppSizes.size18),
+                Gap(AppSizes.size24),
                 CustomTextField(
                   label: AppStrings.password,
-                  hintText: '',
+                  hintText: '••••••••••••',
                   controller: _passwordController,
                   isPassword: true,
                   validator: FormHelper.validatePassword,
                 ),
-                Gap(AppSizes.size18),
+                Gap(AppSizes.size24),
                 CustomTextField(
                   label: AppStrings.confirmPassword,
                   hintText: '',
-                  controller: _passwordController,
+                  controller: _confirmPasswordController,
                   isPassword: true,
-                  validator: FormHelper.validatePassword,
+                  validator: (value) => FormHelper.validateConfirmPassword(
+                    confirmPassword: value,
+                    originalPassword: _passwordController.text,
+                  ),
                 ),
                 Gap(AppSizes.size16),
                 Row(
@@ -112,21 +124,28 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Gap(AppSizes.size8),
                     Text(
                       AppStrings.remainAnonymous,
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        fontSize: AppSizes.size12,
-                      ),
+                      style: theme.textTheme.bodySmall,
                     ),
                   ],
                 ),
-                Gap(AppSizes.size30),
-                PrimaryButton(text: AppStrings.createAccount, onPressed: () {}),
                 Gap(AppSizes.size24),
+
+                PrimaryButton(
+                  text: AppStrings.createAccount,
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                    }
+                  },
+                ),
+                Gap(AppSizes.size24),
+
+                // OR Divider
                 Row(
                   children: [
                     Expanded(child: Divider(color: theme.dividerTheme.color)),
                     Padding(
                       padding: EdgeInsets.symmetric(
-                        horizontal: AppTheme.size16,
+                        horizontal: AppSizes.size16,
                       ),
                       child: Text(
                         AppStrings.or,
@@ -177,7 +196,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             color: theme.colorScheme.primary,
                             fontWeight: FontWeight.bold,
                           ),
-                          recognizer: TapGestureRecognizer()..onTap = () {},
+                          recognizer: TapGestureRecognizer()..onTap = () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const RegisterScreen(),
+                                ));
+                          },
                         ),
                       ],
                     ),
