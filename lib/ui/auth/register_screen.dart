@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parle_app/ui/auth/topic_selection_screen.dart';
 import 'package:parle_app/ui/auth/widgets/auth.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -16,7 +17,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _userNameController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
-  late TapGestureRecognizer _signInTapRecognizer;
   bool _remainAnonymous = false;
 
   @override
@@ -26,7 +26,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
     _userNameController.dispose();
     _passwordController.dispose();
     _confirmPasswordController.dispose();
-    _signInTapRecognizer.dispose();
     super.dispose();
   }
 
@@ -196,7 +195,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const RegisterScreen(),
+                                  builder: (context) => const TopicSelectionScreen(),
                                 ));
                           },
                         ),

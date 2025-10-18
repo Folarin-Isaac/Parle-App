@@ -28,7 +28,19 @@ class AppStrings {
   static const String alreadyHaveAccount = 'Already have an account? ';
   static const String signIn = 'SIGN IN';
   static const String userName = 'Username  (This name appears if you check the anonymous button)';
-
+  static const String securityPin = 'Pin for Security';
+  static const String illustration = 'Illustration';
+  static const String one = '1';
+  static const String two = '2';
+  static const String three = '3';
+  static const String four = '4';
+  static const String five = '5';
+  static const String six = '6';
+  static const String seven = '7';
+  static const String eight = '8';
+  static const String nine = '9';
+  static const String zero = '0';
+  static const String dot = '•';
 
   // Personal Details Screen
   static const String personalDetails = 'Personal Details';
@@ -101,6 +113,8 @@ class AppStrings {
   static const String executiveProfessionalCoaching = 'Executive and Professional Coaching';
   static const String lifeChanges = 'Life Changes';
   static const String parentingIssues = 'Parenting Issues';
+  static const String traumaAndAbuse = 'Trauma & Abuse';
+
 }
 
 

@@ -4,6 +4,7 @@ class AppSizes {
 
   // SPACING & SIZING CONSTANTS
   static const double size0 = 0;
+  static const double size1_5 = 0;
   static const double size2 = 2.0;
   static const double size4 = 4.0;
   static const double size6 = 6.0;
@@ -25,9 +26,12 @@ class AppSizes {
   static const double size64 = 64.0;
   static const double size72 = 72.0;
   static const double size80 = 80.0;
+  static const double size90 = 90.0;
+  static const double size94 = 94.0;
   static const double size96 = 96.0;
   static const double size100 = 100.0;
   static const double size120 = 120.0;
+  static const double size220 = 220.0;
 
   // BORDER RADIUS
   static const double radius2 = 2.0;
@@ -41,6 +45,7 @@ class AppSizes {
   static const double radius24 = 24.0;
   static const double radius28 = 28.0;
   static const double radius32 = 32.0;
+  static const double radius36 = 36.0;
   static const double radiusFull = 9999.0;
 
   // ELEVATION
@@ -63,5 +68,9 @@ class AppSizes {
   static const Duration durationLong = Duration(milliseconds: 500);
   static const Duration durationExtraLong = Duration(milliseconds: 800);
   static const Duration durationSlow = Duration(milliseconds: 1000);
+
+  //INTEGER SIZES
+  static const int int4 = 4;
+
 
 }
