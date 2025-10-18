@@ -159,6 +159,7 @@ class _PinSecurityScreenState extends State<PinSecurityScreen> {
           color: isDarkMode
               ? Colors.black
               : Colors.white,
+          size: AppSizes.size30,
         ),
       )
           : null,

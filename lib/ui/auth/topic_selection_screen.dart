@@ -105,27 +105,31 @@ class _TopicSelectionScreenState extends State<TopicSelectionScreen> {
                         ],
                       ),
                     ),
-                    if (_selectedTopics.isNotEmpty)
-                      Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: AppSizes.size12,
-                          vertical: AppSizes.size4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: theme.colorScheme.primary.withAlpha(25),
-                          borderRadius: BorderRadius.circular(AppSizes.radius8),
-                        ),
-                        child: Text(
-                          '${_selectedTopics.length} Selected',
-                          style: theme.textTheme.bodySmall?.copyWith(
-                            color: theme.colorScheme.primary,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
                   ],
                 ),
-                Gap(AppSizes.size32),
+                Gap(AppSizes.size10),
+                if (_selectedTopics.isNotEmpty)
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: AppSizes.size12,
+                        vertical: AppSizes.size4,
+                      ),
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.primary.withAlpha(25),
+                        borderRadius: BorderRadius.circular(AppSizes.radius8),
+                      ),
+                      child: Text(
+                        '${_selectedTopics.length} Selected',
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: theme.colorScheme.primary,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ),
+                Gap(AppSizes.size10),
                 Wrap(
                   spacing: AppSizes.size12,
                   runSpacing: AppSizes.size12,
@@ -186,7 +190,7 @@ class _TopicSelectionScreenState extends State<TopicSelectionScreen> {
               ));
         },
         backgroundColor: const Color(0xFFFDB827),
-        child: const Icon(Icons.arrow_forward, color: Colors.white),
+        child: const Icon(Icons.arrow_forward, color: Colors.white, size: AppSizes.size30,),
       )
           : null,
     );
