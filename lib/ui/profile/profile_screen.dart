@@ -144,8 +144,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 ? AppColors.darkCardBackground
                                 : Colors.grey[300],
                             backgroundImage: _avatarImage != null
-                                ? FileImage(_avatarImage!) // ✅ Show selected image
-                                : null,
+                                ? FileImage(_avatarImage!)                                 : null,
                             child: _avatarImage == null
                                 ? Text(
                               '👤',
