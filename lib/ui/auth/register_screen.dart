@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:parle_app/ui/auth/topic_selection_screen.dart';
-import 'package:parle_app/ui/auth/widgets/auth.dart';
+import 'package:parle_app/ui/auth/auth.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});

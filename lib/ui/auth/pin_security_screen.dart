@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parle_app/ui/auth/widgets/auth.dart';
+import 'package:parle_app/ui/auth/auth.dart';
 
 class PinSecurityScreen extends StatefulWidget {
   const PinSecurityScreen({super.key});

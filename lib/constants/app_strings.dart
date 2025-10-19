@@ -10,7 +10,7 @@ class AppStrings {
   // Login Screen
   static const String welcomeBack = 'Hi! Welcome Back.';
   static const String kindlyLog = 'Kindly log in to begin';
-  static const String email = 'E-mail';
+  static const String email = 'Email';
   static const String password = 'Password';
   static const String remainAnonymous = 'Remain Anonymous';
   static const String forgotPassword = 'Forgot Password?';
@@ -51,6 +51,7 @@ class AppStrings {
   static const String phoneNumber = 'Phone Number';
   static const String phoneNumberHint = '0802 505 3698';
   static const String dateOfBirth = 'Date of Birth';
+  static const String location = 'Location';
   static const String dateOfBirthHint = 'DD/MM/YY';
   static const String faithAndReligion = 'Faith and Religion';
   static const String religion = 'Religion';
@@ -79,13 +80,11 @@ class AppStrings {
   static const String kenya = 'Kenya';
   static const String southAfrica = 'South Africa';
   static const String country = 'Country';
-
-
+  static const String anonName  = 'Anon name';
 
   // Profile Screen
   static const String profile = 'Profile';
   static const String logOut = 'Log Out';
-  static const String anonName = 'Anon Name:';
   static const String saveChanges = 'Save Changes';
   static const String contactAndLocation = 'Contact and Location';
 

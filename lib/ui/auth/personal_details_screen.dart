@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parle_app/ui/auth/widgets/auth.dart';
+import 'package:parle_app/ui/auth/auth.dart';
 import 'package:parle_app/ui/auth/widgets/custom_dropdown.dart';
 
 class PersonalDetailsScreen extends StatefulWidget {

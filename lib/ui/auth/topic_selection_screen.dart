@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:parle_app/ui/auth/pin_security_screen.dart';
-import 'package:parle_app/ui/auth/widgets/auth.dart';
+import 'package:parle_app/ui/auth/auth.dart';
 
 
 class TopicSelectionScreen extends StatefulWidget {

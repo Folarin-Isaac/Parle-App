@@ -11,11 +11,14 @@ class AppSizes {
   static const double size8 = 8.0;
   static const double size10 = 10.0;
   static const double size12 = 12.0;
+  static const double size15 = 15.0;
   static const double size14 = 14.0;
   static const double size16 = 16.0;
   static const double size18 = 18.0;
   static const double size20 = 20.0;
   static const double size24 = 24.0;
+  static const double size25 = 25.0;
+  static const double size27 = 27.0;
   static const double size28 = 28.0;
   static const double size30 = 30.0;
   static const double size32 = 32.0;
@@ -46,6 +49,7 @@ class AppSizes {
   static const double radius28 = 28.0;
   static const double radius32 = 32.0;
   static const double radius36 = 36.0;
+  static const double radius40 = 40.0;
   static const double radiusFull = 9999.0;
 
   // ELEVATION

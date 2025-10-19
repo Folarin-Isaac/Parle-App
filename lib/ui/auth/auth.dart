@@ -2,7 +2,7 @@ export 'package:parle_app/constants/app_colors.dart';
 export 'package:parle_app/constants/app_sizes.dart';
 export 'package:parle_app/constants/app_strings.dart';
 export 'package:parle_app/constants/constants.dart';
-export 'package:parle_app/ui/auth/widgets/custom_text_field.dart';
+export 'package:parle_app/components/custom_text_field.dart';
 export 'package:parle_app/components/custom_button.dart';
 export 'package:parle_app/ui/auth/widgets/social_button.dart';
 export 'package:parle_app/components/app_logo.dart';

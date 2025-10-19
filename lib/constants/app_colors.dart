@@ -19,7 +19,7 @@ class AppColors {
   static const Color lightCream = Color(0xFFFFF8E1);
   static const Color lightGray = Color(0xFFCCCCCC);
   static const Color gray1 = Color(0xFF333333);
-  static const Color yellow1 = Color(0xFFFDB827);
+  static const Color yellow1 = Color(0xFFFFBA02);
   static const Color blue1 = Color(0xFF003D5C);
   static const Color lightSectionHeader = Color(0xFFD32F2F);
 
