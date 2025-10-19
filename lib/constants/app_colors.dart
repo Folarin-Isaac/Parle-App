@@ -21,6 +21,7 @@ class AppColors {
   static const Color gray1 = Color(0xFF333333);
   static const Color yellow1 = Color(0xFFFDB827);
   static const Color blue1 = Color(0xFF003D5C);
+  static const Color lightSectionHeader = Color(0xFFD32F2F);
 
   // Dark Theme Colors
   static const Color darkPrimary = Color(0xFFFDB827);
@@ -35,6 +36,7 @@ class AppColors {
   static const Color darkDivider = Color(0xFF424242);
   static const Color darkInputBorder = Color(0xFF666666);
   static const Color darkGray = Color(0xFF333333);
+  static const Color darkSectionHeader = Color(0xFFEF5350);
 
   // Common Colors (same in both themes)
   static const Color primary = Color(0xFFFDB827);

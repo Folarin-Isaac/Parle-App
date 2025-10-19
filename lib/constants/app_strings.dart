@@ -44,18 +44,43 @@ class AppStrings {
 
   // Personal Details Screen
   static const String personalDetails = 'Personal Details';
-  static const String kindlyFill = 'Kindly Fill in these details to leave us even you better';
+  static const String personalDetailsSubtitle = 'Kindly fill in these details to enable us serve you better';
   static const String residence = 'Residence';
-  static const String stateOrProvince = 'State or Province';
-  static const String townOrOther = 'Town or other';
-  static const String postalOrZipCode = 'Postal or Zip code';
+  static const String countryOfResidence = 'Country of residence';
+  static const String state = 'State';
+  static const String phoneNumber = 'Phone Number';
+  static const String phoneNumberHint = '0802 505 3698';
   static const String dateOfBirth = 'Date of Birth';
+  static const String dateOfBirthHint = 'DD/MM/YY';
   static const String faithAndReligion = 'Faith and Religion';
-  static const String committedWithinReligion = 'What would like or Committed unto (within Religion)';
+  static const String religion = 'Religion';
+  static const String denomination = 'Denomination';
+  static const String similarReligionConsultation = 'Would you like a consultation with a similar religion';
+  static const String spiritualCounselling = 'Would you like a spiritual based counselling?';
+  static const String preferClinicalSessions = 'No, I would prefer to keep our sessions clinical';
   static const String yes = 'Yes';
   static const String no = 'No';
-  static const String optionalQuestionsPrompt = 'Would you given optional based questions?';
-  static const String preferEthicalAnswers = 'No, I would prefer to leave our answers Ethical';
+  static const String christian = 'Christian';
+  static const String muslim = 'Muslim';
+  static const String baptist = 'Hindu';
+  static const String hindu = 'Baptist';
+  static const String other = 'Other';
+  static const String catholic = 'Catholic';
+  static const String protestant = 'Protestant';
+  static const String pentecostal = 'Pentecostal';
+  static const String orthodox = 'Orthodox';
+  static const String otherDenomination = 'Other';
+  static const String lagos = 'lagos';
+  static const String abuja = 'Abuja';
+  static const String kano = 'Kano';
+  static const String rivers = 'Rivers';
+  static const String nigeria = 'Nigeria';
+  static const String ghana = 'Ghana';
+  static const String kenya = 'Kenya';
+  static const String southAfrica = 'South Africa';
+  static const String country = 'Country';
+
+
 
   // Profile Screen
   static const String profile = 'Profile';
@@ -73,16 +98,11 @@ class AppStrings {
   static const String username = 'Username (the anon name you that the counsellor sees)';
 
   // Profile - Contact and Location Section
-  static const String countryOfResidence = 'Country of residence';
-  static const String state = 'State';
   static const String town = 'Town or other';
 
   // Profile - Faith and Religion Section
-  static const String religion = 'Religion';
-  static const String denomination = 'Denomination';
-  static const String counsellorSimilarReligion = 'Would you like a Counsellor unto a similar Religion?';
+  static const String counsellorSimilarReligion = 'Would you like a Counsellor with a similar Religion?';
   static const String spiritualBasedCounseling = 'Would you like a Spiritual-based counseling?';
-  static const String keepSessionsEthical = 'No, I would prefer to keep our sessions Ethical';
 
   // Logout Confirmation
   static const String logoutConfirmation = 'Are you sure you want to log out?';

@@ -198,7 +198,6 @@ class _PinSecurityScreenState extends State<PinSecurityScreen> {
   Widget _buildBackspaceButton(bool isDarkMode) {
     return InkWell(
       onTap: _onBackspace,
-      //borderRadius: BorderRadius.circular(AppSizes.radius36),
       child: Icon(
         Icons.backspace_sharp,
         color: isDarkMode
