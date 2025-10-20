@@ -43,8 +43,6 @@ class ArticleDetailScreen extends StatelessWidget {
                 ),
               ),
             ),
-
-            // Scrollable Content
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
