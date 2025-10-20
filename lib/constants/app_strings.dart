@@ -82,6 +82,13 @@ class AppStrings {
   static const String country = 'Country';
   static const String anonName  = 'Anon name';
 
+  // Home Screen
+  static const String welcomeToSafeSpace = 'Welcome to your safe space!';
+  static const String suggestedCounsellors = 'Suggested Counsellors';
+  static const String selectToViewProfile = 'Select to view profile and start a session';
+  static const String latestArticles = 'Latest Articles';
+  static const String viewAll = 'View all';
+
   // Profile Screen
   static const String profile = 'Profile';
   static const String logOut = 'Log Out';

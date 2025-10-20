@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:parle_app/app/theme/app_theme.dart';
 import 'package:parle_app/constants/app_strings.dart';
+import 'package:parle_app/ui/articles/articles_screen.dart';
 import 'package:parle_app/ui/auth/login_screen.dart';
 import 'package:parle_app/app/theme/theme_provider.dart';
+import 'package:parle_app/ui/home/home_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -27,7 +29,7 @@ class ParleApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeProvider.themeMode,
-          home: const LoginScreen(),
+          home: const ArticlesScreen(),
         );
       },
     );
