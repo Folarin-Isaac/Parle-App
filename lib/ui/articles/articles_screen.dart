@@ -4,6 +4,7 @@ import 'package:parle_app/app/theme/app_theme.dart';
 import 'package:parle_app/components/app_logo.dart';
 import 'package:parle_app/constants/app_colors.dart';
 import 'package:parle_app/constants/app_sizes.dart';
+import 'package:parle_app/ui/articles/article_detail_screen.dart';
 import 'package:parle_app/ui/articles/widgets/article_list_card.dart';
 
 class ArticlesScreen extends StatefulWidget {
@@ -16,7 +17,6 @@ class ArticlesScreen extends StatefulWidget {
 class _ArticlesScreenState extends State<ArticlesScreen> {
   final TextEditingController _searchController = TextEditingController();
 
-  // Sample articles data
   final List<Map<String, String>> _allArticles = [
     {
       'title': 'Cyber Bullying and how to handle it',
@@ -113,24 +113,18 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Title
                       Text(
                         'Articles.',
                         style: theme.textTheme.displaySmall,
                       ),
                       Gap(AppSizes.size8),
-
-                      // Subtitle
                       Text(
                         'Whenever you read a good book, somewhere in the world a door opens to allow in more light',
                         style: theme.textTheme.bodyMedium?.copyWith(
                           color: theme.textTheme.bodySmall?.color,
                         ),
                       ),
-
                       Gap(AppSizes.size24),
-
-                      // Search Bar
                       Container(
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -186,12 +180,24 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                             imageUrl: article['image']!,
                             title: article['title']!,
                             author: article['author']!,
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ArticleDetailScreen(
+                                    title: article['title']!,
+                                    author: article['author']!,
+                                    imageUrl: article['image']!,
+                                    content: 'Cyberbullying or electronic aggression has already been designated as a serious public health threat. Cyberbullying should also be considered as a cause for new onset psychological symptoms, somatic symptoms of unclear etiology or a drop in academic performance.',
+                                  ),
+                                ),
+                              );
+                            },
                           );
                         },
                       ),
-
                       Gap(AppSizes.size40),
+
                     ],
                   ),
                 ),

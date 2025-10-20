@@ -27,7 +27,6 @@ class ArticleDetailScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Back Button
             Padding(
               padding: EdgeInsets.all(AppSizes.size16),
               child: Align(
@@ -60,7 +59,6 @@ class ArticleDetailScreen extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-
                           Gap(AppSizes.size12),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -77,7 +75,6 @@ class ArticleDetailScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-
                           Gap(AppSizes.size24),
                         ],
                       ),
