@@ -139,6 +139,7 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                           controller: _searchController,
                           onChanged: _filterArticles,
                           decoration: InputDecoration(
+                            fillColor: Colors.transparent,
                             hintText: 'Search Articles',
                             hintStyle: theme.textTheme.bodyMedium?.copyWith(
                               color: theme.textTheme.bodySmall?.color?.withValues(alpha: 0.5),
@@ -197,7 +198,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                         },
                       ),
                       Gap(AppSizes.size40),
-
                     ],
                   ),
                 ),
