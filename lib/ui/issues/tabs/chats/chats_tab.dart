@@ -9,7 +9,6 @@ class ChatsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final isDarkMode = AppTheme.isDarkMode(context);
 
     final List<Map<String, dynamic>> chats = [
@@ -17,14 +16,14 @@ class ChatsTab extends StatelessWidget {
         'name': 'Amina Halima',
         'lastMessage': 'How can I help you today?',
         'image': 'https://example.com/avatar1.jpg',
-        'hasNotification': true,
+        'unreadCount': 2,
         'isRead': false,
       },
       {
         'name': 'Amanda Uche',
         'lastMessage': 'Thank you so much',
         'image': 'https://example.com/avatar2.jpg',
-        'hasNotification': false,
+        'unreadCount': 0,
         'isRead': true,
       },
     ];
@@ -37,14 +36,18 @@ class ChatsTab extends StatelessWidget {
           vertical: AppSizes.size12,
         ),
         itemCount: chats.length,
-        separatorBuilder: (context, index) => SizedBox(height: AppSizes.size8),
+        separatorBuilder: (context, index) => Divider(
+          height: AppSizes.size24,
+          thickness: 1,
+          color: isDarkMode ? AppColors.darkBorder : Colors.grey[200],
+        ),
         itemBuilder: (context, index) {
           final chat = chats[index];
           return ChatListItem(
             name: chat['name'],
             lastMessage: chat['lastMessage'],
             imageUrl: chat['image'],
-            hasNotification: chat['hasNotification'],
+            unreadCount: chat['unreadCount'],
             isRead: chat['isRead'],
             onTap: () {},
           );

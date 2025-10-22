@@ -8,7 +8,7 @@ class ChatListItem extends StatelessWidget {
   final String name;
   final String lastMessage;
   final String imageUrl;
-  final bool hasNotification;
+  final int unreadCount;
   final bool isRead;
   final VoidCallback? onTap;
 
@@ -17,7 +17,7 @@ class ChatListItem extends StatelessWidget {
     required this.name,
     required this.lastMessage,
     required this.imageUrl,
-    this.hasNotification = false,
+    this.unreadCount = 0,
     this.isRead = false,
     this.onTap,
   });
@@ -32,8 +32,7 @@ class ChatListItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(AppSizes.radius8),
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: AppSizes.size8,
-          vertical: AppSizes.size12,
+          vertical: AppSizes.size8,
         ),
         child: Row(
           children: [
@@ -61,10 +60,7 @@ class ChatListItem extends StatelessWidget {
                 ),
               ),
             ),
-
             Gap(AppSizes.size12),
-
-            // Name and Message
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,17 +103,28 @@ class ChatListItem extends StatelessWidget {
                 ],
               ),
             ),
-
-            // Notification Badge
-            if (hasNotification)
+            if (unreadCount > 0)
               Container(
-                width: 10,
-                height: 10,
+                padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(
                   color: isDarkMode
                       ? AppColors.darkPrimary
                       : const Color(0xFFFDB827),
                   shape: BoxShape.circle,
+                ),
+                constraints: const BoxConstraints(
+                  minWidth: AppSizes.size20,
+                  minHeight: AppSizes.size20,
+                ),
+                child: Center(
+                  child: Text(
+                    '$unreadCount',
+                    style: TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w700,
+                      color: isDarkMode ? Colors.black : Colors.white,
+                    ),
+                  ),
                 ),
               ),
           ],
