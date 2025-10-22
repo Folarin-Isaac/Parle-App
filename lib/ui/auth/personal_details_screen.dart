@@ -199,7 +199,7 @@ class _PersonalDetailsScreenState extends State<PersonalDetailsScreen> {
                   ),
                   Gap(AppSizes.size24),
                   CustomDropdown(
-                    label: AppStrings.spiritualCounselling,
+                    label: AppStrings.spiritualBasedCounseling,
                     value: _spiritualCounselling,
                     items: const [
                       AppStrings.yes,

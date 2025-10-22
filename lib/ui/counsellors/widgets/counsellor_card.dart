@@ -3,12 +3,16 @@ import 'package:gap/gap.dart';
 import 'package:parle_app/app/theme/app_theme.dart';
 import 'package:parle_app/constants/app_colors.dart';
 import 'package:parle_app/constants/app_sizes.dart';
+import 'package:parle_app/ui/counsellors/counsellor_profile_screen.dart';
 
 class CounsellorCard extends StatelessWidget {
   final String imageUrl;
   final String name;
   final String availability;
   final bool isOnline;
+  final String? bio;
+  final String? location;
+  final List<String>? specialties;
   final VoidCallback? onTap;
 
   const CounsellorCard({
@@ -17,6 +21,9 @@ class CounsellorCard extends StatelessWidget {
     required this.name,
     required this.availability,
     this.isOnline = false,
+    this.bio,
+    this.location,
+    this.specialties,
     this.onTap,
   });
 
@@ -26,7 +33,22 @@ class CounsellorCard extends StatelessWidget {
     final isDarkMode = AppTheme.isDarkMode(context);
 
     return GestureDetector(
-      onTap: onTap,
+      onTap: onTap ?? () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CounsellorProfileScreen(
+              name: name,
+              imageUrl: imageUrl,
+              bio: bio ?? 'Counsellor since June 2015\nCareer Counselling in Kaduna, Nigeria',
+              location: location ?? 'Kaduna, Nigeria',
+              availability: availability,
+              isOnline: isOnline,
+              specialties: specialties ?? ['Mental Health', 'Sexuality', 'Depression', 'Addiction'],
+            ),
+          ),
+        );
+      },
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

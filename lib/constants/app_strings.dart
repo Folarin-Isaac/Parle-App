@@ -6,7 +6,6 @@ class AppStrings {
   static const String pacifico = 'Pacifico';
   static const String fontFamily = 'Montserrat';
 
-
   // Login Screen
   static const String welcomeBack = 'Hi! Welcome Back.';
   static const String kindlyLog = 'Kindly log in to begin';
@@ -56,8 +55,8 @@ class AppStrings {
   static const String faithAndReligion = 'Faith and Religion';
   static const String religion = 'Religion';
   static const String denomination = 'Denomination';
-  static const String similarReligionConsultation = 'Would you like a consultation with a similar religion';
-  static const String spiritualCounselling = 'Would you like a spiritual based counselling?';
+  static const String counsellorSimilarReligion = 'Would you like a Counsellor with a similar Religion?';
+  static const String spiritualBasedCounseling = 'Would you like a Spiritual-based counseling?';
   static const String preferClinicalSessions = 'No, I would prefer to keep our sessions clinical';
   static const String yes = 'Yes';
   static const String no = 'No';
@@ -89,6 +88,17 @@ class AppStrings {
   static const String latestArticles = 'Latest Articles';
   static const String viewAll = 'View all';
 
+  //Counsellors Screen
+  static const String bookAsCounsellor = 'BOOK AS COUNSELLOR';
+  static const String enterPin = 'Enter Pin';
+  static const String enterPinInfo = 'We want you to be extra secured!\n Enter pin to access sessions with counsellor.';
+
+  //Issues Screen
+  static const String editChallenge = 'EDIT\nCHALLENGE';
+  static const String chats = 'CHATS';
+  static const String suggestedCounsellors1 = 'SUGGESTED\nCOUNSELLORS';
+
+
   // Profile Screen
   static const String profile = 'Profile';
   static const String logOut = 'Log Out';
@@ -105,10 +115,6 @@ class AppStrings {
 
   // Profile - Contact and Location Section
   static const String town = 'Town or other';
-
-  // Profile - Faith and Religion Section
-  static const String counsellorSimilarReligion = 'Would you like a Counsellor with a similar Religion?';
-  static const String spiritualBasedCounseling = 'Would you like a Spiritual-based counseling?';
 
   // Logout Confirmation
   static const String logoutConfirmation = 'Are you sure you want to log out?';
@@ -140,7 +146,6 @@ class AppStrings {
   static const String lifeChanges = 'Life Changes';
   static const String parentingIssues = 'Parenting Issues';
   static const String traumaAndAbuse = 'Trauma & Abuse';
-
 }
 
 

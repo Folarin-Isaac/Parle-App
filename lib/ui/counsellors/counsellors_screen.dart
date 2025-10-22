@@ -4,6 +4,7 @@ import 'package:parle_app/app/theme/app_theme.dart';
 import 'package:parle_app/components/app_logo.dart';
 import 'package:parle_app/constants/app_colors.dart';
 import 'package:parle_app/constants/app_sizes.dart';
+import 'package:parle_app/ui/counsellors/counsellor_profile_screen.dart';
 import 'package:parle_app/ui/counsellors/widgets/counsellor_card.dart';
 
 class CounsellorsScreen extends StatefulWidget {
@@ -16,61 +17,69 @@ class CounsellorsScreen extends StatefulWidget {
 class _CounsellorsScreenState extends State<CounsellorsScreen> {
   final TextEditingController _searchController = TextEditingController();
 
-  // Sample counsellors data
   final List<Map<String, dynamic>> _allCounsellors = [
     {
       'name': 'Amina Halima',
       'availability': '9:00am - 9:00pm',
       'image': 'https://example.com/avatar1.jpg',
       'isOnline': true,
+      'specialties': ['Mental Health', 'Sexuality', 'Depression', 'Addiction'],
     },
     {
       'name': 'Kazeem Raman',
       'availability': '9:00am - 9:00pm',
       'image': 'https://example.com/avatar2.jpg',
       'isOnline': true,
+      'specialties': ['Mental Health', 'Sexuality', 'Depression', 'Addiction'],
     },
     {
       'name': 'Christina Okor',
       'availability': '9:00am - 12:00pm',
       'image': 'https://example.com/avatar3.jpg',
       'isOnline': false,
+      'specialties': ['Mental Health', 'Sexuality', 'Depression', 'Addiction'],
     },
     {
       'name': 'Amanda Uche',
       'availability': '7:00am - 7:00pm',
       'image': 'https://example.com/avatar4.jpg',
       'isOnline': true,
+      'specialties': ['Mental Health', 'Sexuality', 'Depression', 'Addiction'],
     },
     {
       'name': 'Fatima Dantata',
       'availability': '9:00am - 5:00pm',
       'image': 'https://example.com/avatar5.jpg',
       'isOnline': false,
+      'specialties': ['Mental Health', 'Sexuality', 'Depression', 'Addiction'],
     },
     {
       'name': 'Kelechi Emalie',
       'availability': '9:00am - 5:00pm',
       'image': 'https://example.com/avatar6.jpg',
       'isOnline': false,
+      'specialties': ['Mental Health', 'Sexuality', 'Depression', 'Addiction'],
     },
     {
       'name': 'Hameed Idris',
       'availability': '9:00am - 5:00pm',
       'image': 'https://example.com/avatar7.jpg',
       'isOnline': false,
+      'specialties': ['Mental Health', 'Sexuality', 'Depression', 'Addiction'],
     },
     {
       'name': 'Mustapha Raji',
       'availability': '9:00am - 9:00pm',
       'image': 'https://example.com/avatar8.jpg',
       'isOnline': true,
+      'specialties': ['Mental Health', 'Sexuality', 'Depression', 'Addiction'],
     },
     {
       'name': 'Anne-Marie Sumah',
       'availability': '9:00am - 12:00pm',
       'image': 'https://example.com/avatar9.jpg',
       'isOnline': false,
+      'specialties': ['Mental Health', 'Sexuality', 'Depression', 'Addiction'],
     },
   ];
 
@@ -154,7 +163,7 @@ class _CounsellorsScreenState extends State<CounsellorsScreen> {
                           style: theme.textTheme.bodyMedium,
                           decoration: InputDecoration(
                             fillColor: Colors.transparent,
-                            hintText: 'Enter Counsellor\'s Name',
+                            hintText: "Enter Counsellor's Name",
                             hintStyle: theme.textTheme.bodyMedium?.copyWith(
                               color: theme.textTheme.bodySmall?.color
                                   ?.withValues(alpha: 0.4),
@@ -183,7 +192,8 @@ class _CounsellorsScreenState extends State<CounsellorsScreen> {
                                   ),
                                 ),
                               ),
-                            ) : GridView.builder(
+                            )
+                          : GridView.builder(
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
                               gridDelegate:
@@ -201,7 +211,22 @@ class _CounsellorsScreenState extends State<CounsellorsScreen> {
                                   name: counsellor['name'],
                                   availability: counsellor['availability'],
                                   isOnline: counsellor['isOnline'],
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => CounsellorProfileScreen(
+                                          name: counsellor['name'],
+                                          imageUrl: counsellor['image'],
+                                          bio: 'Counsellor since June 2015\nCareer Counselling in Kaduna, Nigeria',
+                                          location:  'Kaduna, Nigeria',
+                                          availability: counsellor['availability'],
+                                          isOnline: counsellor['isOnline'],
+                                          specialties: counsellor['specialties']
+                                        ),
+                                      ),
+                                    );
+                                  },
                                 );
                               },
                             ),
