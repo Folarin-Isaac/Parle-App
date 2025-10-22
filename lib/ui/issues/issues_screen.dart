@@ -1,4 +1,5 @@
 import 'package:parle_app/ui/issues/issues.dart';
+import 'package:parle_app/ui/issues/tabs/chats/chats_tab.dart';
 import 'package:parle_app/ui/issues/tabs/suggested_counsellors/suggested_counsellors_tab.dart';
 import 'package:parle_app/ui/issues/tabs/edit_challenge/edit_challenge_tab.dart';
 
@@ -147,7 +148,7 @@ class _IssuesScreenState extends State<IssuesScreen>
                       onTopicToggle: _toggleTopic,
                       onClearSelection: _clearSelection,
                     ),
-                    //const ChatsTab(),
+                    const ChatsTab(),
                     const SuggestedCounsellorsTab(),
                   ],
                 ),
