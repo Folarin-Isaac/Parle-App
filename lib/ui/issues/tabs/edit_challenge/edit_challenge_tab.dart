@@ -30,7 +30,7 @@ class _EditChallengeTabState extends State<EditChallengeTab> {
           children: [
             Gap(AppSizes.size24),
             Text(
-              'You can select as many as possible.',
+              AppStrings.selectAsMany,
               style: theme.textTheme.bodyMedium?.copyWith(
                 color: theme.textTheme.bodyMedium?.color,
               ),
@@ -86,7 +86,7 @@ class _EditChallengeTabState extends State<EditChallengeTab> {
                     ? TopicsData.topicColors[topic]!
                     : (isDarkMode
                     ? AppColors.darkPrimary
-                    : const Color(0xFFFDB827)))
+                    : AppColors.lightPrimary))
                     : (isDarkMode
                     ? AppColors.darkSecondaryBackground
                     : Colors.white);

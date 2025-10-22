@@ -97,6 +97,7 @@ class AppStrings {
   static const String editChallenge = 'EDIT\nCHALLENGE';
   static const String chats = 'CHATS';
   static const String suggestedCounsellors1 = 'SUGGESTED\nCOUNSELLORS';
+  static const String selectAsMany = 'You can select as many as possible.';
 
 
   // Profile Screen

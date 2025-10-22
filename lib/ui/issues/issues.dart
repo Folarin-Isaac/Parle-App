@@ -7,3 +7,4 @@ export 'package:parle_app/constants/app_sizes.dart';
 export 'package:parle_app/ui/home/widgets/article_card.dart';
 export 'package:parle_app/ui/home/widgets/counsellor_avatar.dart';
 export 'package:parle_app/ui/utils/topics_data.dart';
+export 'package:parle_app/constants/app_strings.dart';

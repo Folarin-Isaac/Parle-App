@@ -1,4 +1,3 @@
-import 'package:parle_app/constants/app_strings.dart';
 import 'package:parle_app/ui/issues/issues.dart';
 import 'package:parle_app/ui/issues/tabs/edit_challenge/edit_challenge_tab.dart';
 
