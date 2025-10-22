@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:parle_app/app/theme/app_theme.dart';
-import 'package:parle_app/components/app_logo.dart';
+import 'package:parle_app/components/app_header.dart';
 import 'package:parle_app/constants/app_colors.dart';
 import 'package:parle_app/constants/app_sizes.dart';
 import 'package:parle_app/ui/articles/article_detail_screen.dart';
@@ -90,22 +90,7 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.all(AppSizes.size24),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const AppLogo(),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.notifications_outlined,
-                      color: theme.iconTheme.color,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            AppHeader(),
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(

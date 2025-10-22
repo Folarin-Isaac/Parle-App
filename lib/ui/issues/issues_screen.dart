@@ -1,3 +1,4 @@
+import 'package:parle_app/components/app_header.dart';
 import 'package:parle_app/ui/issues/issues.dart';
 import 'package:parle_app/ui/issues/tabs/chats/chats_tab.dart';
 import 'package:parle_app/ui/issues/tabs/suggested_counsellors/suggested_counsellors_tab.dart';
@@ -57,7 +58,6 @@ class _IssuesScreenState extends State<IssuesScreen>
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final isDarkMode = AppTheme.isDarkMode(context);
 
     return Scaffold(
@@ -67,22 +67,7 @@ class _IssuesScreenState extends State<IssuesScreen>
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.all(AppSizes.size24),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const AppLogo(),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.notifications_outlined,
-                      color: theme.iconTheme.color,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            AppHeader(),
             TabBar(
               controller: _tabController,
               labelColor: isDarkMode ? Colors.black : Colors.black87,

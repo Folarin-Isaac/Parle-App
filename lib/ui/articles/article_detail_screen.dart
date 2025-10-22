@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:parle_app/app/theme/app_theme.dart';
 import 'package:parle_app/constants/app_sizes.dart';
 
 class ArticleDetailScreen extends StatelessWidget {
@@ -20,7 +19,6 @@ class ArticleDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final isDarkMode = AppTheme.isDarkMode(context);
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,

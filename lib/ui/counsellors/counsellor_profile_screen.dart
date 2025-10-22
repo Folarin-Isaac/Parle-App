@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:parle_app/app/theme/app_theme.dart';
-import 'package:parle_app/components/app_logo.dart';
+import 'package:parle_app/components/app_header.dart';
 import 'package:parle_app/components/custom_button.dart';
 import 'package:parle_app/constants/app_colors.dart';
 import 'package:parle_app/constants/app_sizes.dart';
@@ -38,25 +38,7 @@ class CounsellorProfileScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Header
-            Padding(
-              padding: EdgeInsets.all(AppSizes.size24),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const AppLogo(),
-                  IconButton(
-                    onPressed: () {
-                      // Handle notification
-                    },
-                    icon: Icon(
-                      Icons.notifications_outlined,
-                      color: theme.iconTheme.color,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            AppHeader(),
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(
@@ -64,7 +46,6 @@ class CounsellorProfileScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Title
                       Text(
                         'Counsellors Profile',
                         style: theme.textTheme.displaySmall,

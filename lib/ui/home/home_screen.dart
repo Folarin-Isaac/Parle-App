@@ -1,3 +1,4 @@
+import 'package:parle_app/components/app_header.dart';
 import 'package:parle_app/ui/home/home.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -46,22 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.all(AppSizes.size24),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const AppLogo(),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.notifications_outlined,
-                      color: theme.iconTheme.color,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            AppHeader(),
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(

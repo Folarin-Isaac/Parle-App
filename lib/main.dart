@@ -5,8 +5,7 @@ import 'package:parle_app/app/theme/app_theme.dart';
 import 'package:parle_app/app/theme/theme_provider.dart';
 import 'package:parle_app/constants/app_strings.dart';
 import 'package:parle_app/providers/user_provider.dart';
-import 'package:parle_app/ui/auth/login_screen.dart';
-import 'package:parle_app/ui/issues/issues_screen.dart';
+import 'package:parle_app/ui/articles/articles_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -40,7 +39,7 @@ class ParleApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeProvider.themeMode,
-          home: IssuesScreen(),
+          home: ArticlesScreen(),
         );
       },
     );
