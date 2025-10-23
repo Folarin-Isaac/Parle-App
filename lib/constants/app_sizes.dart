@@ -64,14 +64,15 @@ class AppSizes {
   static const double elevation16 = 16.0;
   static const double elevation24 = 24.0;
 
-  // ANIMATION DURATIONS
-  static const Duration durationInstant = Duration(milliseconds: 0);
-  static const Duration durationFast = Duration(milliseconds: 100);
-  static const Duration durationShort = Duration(milliseconds: 200);
-  static const Duration durationMedium = Duration(milliseconds: 300);
-  static const Duration durationLong = Duration(milliseconds: 500);
-  static const Duration durationExtraLong = Duration(milliseconds: 800);
-  static const Duration durationSlow = Duration(milliseconds: 1000);
+  //DURATIONS
+  static const Duration duration0 = Duration(milliseconds: 0);
+  static const Duration duration3 = Duration(milliseconds: 3);
+  static const Duration duration100 = Duration(milliseconds: 100);
+  static const Duration duration200 = Duration(milliseconds: 200);
+  static const Duration duration300 = Duration(milliseconds: 300);
+  static const Duration duration500 = Duration(milliseconds: 500);
+  static const Duration duration800 = Duration(milliseconds: 800);
+  static const Duration duration1000 = Duration(milliseconds: 1000);
 
   //INTEGER SIZES
   static const int int4 = 4;

@@ -1,4 +1,4 @@
-package com.example.parle_app
+package com.parleapp.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 

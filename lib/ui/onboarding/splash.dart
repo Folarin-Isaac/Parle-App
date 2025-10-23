@@ -1,4 +1,7 @@
-import '../home/home.dart';
+import 'package:flutter/material.dart';
+import 'package:parle_app/constants/app_sizes.dart';
+import 'package:parle_app/constants/constants.dart';
+import 'package:parle_app/ui/auth/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -11,89 +14,42 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    _navigateToNext();
+    _navigateToLogin();
   }
 
-  Future<void> _navigateToNext() async {
-    await Future.delayed(const Duration(seconds: 3));
+  Future<void> _navigateToLogin() async {
+    await Future.delayed(AppSizes.duration3);
 
     if (mounted) {
+      Navigator.pushReplacement(
+        context,
+        PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) => const LoginScreen(),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return FadeTransition(
+              opacity: animation,
+              child: child,
+            );
+          },
+          transitionDuration: AppSizes.duration500,
+        ),
+      );
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
     return Scaffold(
-      backgroundColor: const Color(0xFF8B3A3A),
-      body: Stack(
-        children: [
-          // Blue rectangle (top left)
-          Positioned(
-            top: 0,
-            left: 0,
-            child: Container(
-              width: 170,
-              height: 120,
-              color: const Color(0xFF1E5A7D),
-            ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(JPGImageUrl.splash),
+            fit: BoxFit.cover,
           ),
-
-          // Yellow circle (speech bubble effect)
-          Positioned(
-            top: -50,
-            right: -50,
-            child: Container(
-              width: 230,
-              height: 230,
-              decoration: const BoxDecoration(
-                color: Color(0xFFFDB827),
-                shape: BoxShape.circle,
-              ),
-            ),
-          ),
-
-          // Small tail for speech bubble
-          Positioned(
-            top: 140,
-            right: 150,
-            child: CustomPaint(
-              size: const Size(30, 30),
-              painter: BubbleTailPainter(),
-            ),
-          ),
-
-          // Logo
-          const Center(
-            child: AppLogo(
-              fontSize: 48,
-              color: Colors.white,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
-}
-
-// Small triangle for bubble tail
-class BubbleTailPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = const Color(0xFFFDB827)
-      ..style = PaintingStyle.fill;
-
-    final path = Path()
-      ..moveTo(0, 0)
-      ..lineTo(size.width * 0.5, size.height)
-      ..lineTo(size.width, 0)
-      ..close();
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
