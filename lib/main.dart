@@ -6,6 +6,8 @@ import 'package:parle_app/app/theme/theme_provider.dart';
 import 'package:parle_app/constants/app_strings.dart';
 import 'package:parle_app/providers/user_provider.dart';
 import 'package:parle_app/ui/articles/articles_screen.dart';
+import 'package:parle_app/ui/counsellor/pages/upload_credentials_screen.dart';
+import 'package:parle_app/ui/onboarding/category_selection_screen.dart';
 import 'package:parle_app/ui/onboarding/splash.dart';
 import 'package:provider/provider.dart';
 
@@ -40,7 +42,7 @@ class ParleApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeProvider.themeMode,
-          home: SplashScreen(),
+          home: UploadCredentialsScreen(),
         );
       },
     );

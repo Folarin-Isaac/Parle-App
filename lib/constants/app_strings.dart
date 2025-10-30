@@ -29,6 +29,7 @@ class AppStrings {
   static const String userName = 'Username  (This name appears if you check the anonymous button)';
   static const String securityPin = 'Pin for Security';
   static const String illustration = 'Illustration';
+  static const areaOfExpertise = 'Select your Area of Expertise';
   static const String one = '1';
   static const String two = '2';
   static const String three = '3';
@@ -40,6 +41,13 @@ class AppStrings {
   static const String nine = '9';
   static const String zero = '0';
   static const String dot = '•';
+  static const String exitApplication  =  'EXIT APPLICATION';
+  static const String counsellorMessage  = 'Thank you for registering as a Counsellor. You will receive an E-mail from our Team once your credentials have been reviewed';
+  static const String studentMessage  = 'Thank you for registering as a Student. You can now start exploring and connecting with counsellors';
+  static const String counsellor = 'Counsellor';
+  static const String student = 'Student';
+
+
 
   // Personal Details Screen
   static const String personalDetails = 'Personal Details';
