@@ -26,9 +26,7 @@ class RegistrationSuccessScreen extends StatelessWidget {
           padding: EdgeInsets.all(AppSizes.size24),
           child: Column(
             children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                  child: const AppLogo()),
+              Align(alignment: Alignment.centerLeft, child: const AppLogo()),
               const Spacer(),
               Image.asset(
                 'assets/images/counsellor_registered.png',
