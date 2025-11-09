@@ -5,11 +5,7 @@ import 'package:parle_app/app/theme/app_theme.dart';
 import 'package:parle_app/app/theme/theme_provider.dart';
 import 'package:parle_app/constants/app_strings.dart';
 import 'package:parle_app/providers/user_provider.dart';
-import 'package:parle_app/ui/articles/articles_screen.dart';
-import 'package:parle_app/ui/common/registration_success_screen.dart';
-import 'package:parle_app/ui/counsellor/pages/upload_credentials_screen.dart';
-import 'package:parle_app/ui/onboarding/category_selection_screen.dart';
-import 'package:parle_app/ui/onboarding/splash.dart';
+import 'package:parle_app/ui/counsellor/pages/counsellor_profile/counsellor_profile.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -43,7 +39,7 @@ class ParleApp extends StatelessWidget {
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeProvider.themeMode,
-          home: RegistrationSuccessScreen(userType: 'Counsellor'),
+          home: CounsellorProfileScreen(),
         );
       },
     );

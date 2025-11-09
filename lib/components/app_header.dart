@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parle_app/components/app_logo.dart';
 import 'package:parle_app/constants/app_sizes.dart';
-import 'package:parle_app/ui/notifications/notification_screen.dart';
+import 'package:parle_app/ui/common/notifications/notification_screen.dart';
 
 class AppHeader extends StatelessWidget {
   final bool showNotification;

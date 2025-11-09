@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:parle_app/ui/auth/forgot_password.dart';
-import 'package:parle_app/ui/auth/login_screen.dart';
-import 'package:parle_app/ui/auth/register_screen.dart';
-import 'package:parle_app/ui/home/home_screen.dart';
+import 'package:parle_app/ui/common/auth/forgot_password.dart';
+import 'package:parle_app/ui/common/auth/login_screen.dart';
+import 'package:parle_app/ui/common/auth/register_screen.dart';
+import 'package:parle_app/ui/student/home/student_home_screen.dart';
 
 class AppRouter {
   Map<String, WidgetBuilder> generateRoutes(BuildContext context) {

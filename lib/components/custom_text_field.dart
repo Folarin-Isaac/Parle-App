@@ -13,6 +13,7 @@ class CustomTextField extends StatefulWidget {
   final IconData? prefixIcon;
   final int? maxLines;
   final bool enabled;
+  final bool useRoundedBorder;
 
   const CustomTextField({
     super.key,
@@ -25,6 +26,7 @@ class CustomTextField extends StatefulWidget {
     this.prefixIcon,
     this.maxLines = 1,
     this.enabled = true,
+    this.useRoundedBorder = false,
   });
 
   @override
@@ -33,6 +35,7 @@ class CustomTextField extends StatefulWidget {
 
 class _CustomTextFieldState extends State<CustomTextField> {
   bool _obscureText = true;
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -45,13 +48,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          widget.label,
-          style: theme.textTheme.bodySmall?.copyWith(
-            fontSize: 12,
-            color: theme.textTheme.bodySmall?.color,
+        if (!widget.useRoundedBorder)
+          Text(
+            widget.label,
+            style: theme.textTheme.bodySmall?.copyWith(
+              fontSize: 12,
+              color: theme.textTheme.bodySmall?.color,
+            ),
           ),
-        ),
         TextFormField(
           controller: widget.controller,
           keyboardType: widget.keyboardType,
@@ -62,34 +66,61 @@ class _CustomTextFieldState extends State<CustomTextField> {
           decoration: InputDecoration(
             hintText: widget.hintText,
             hintStyle: theme.textTheme.bodyMedium?.copyWith(
-              color: theme.textTheme.bodySmall?.color,
+              color: theme.textTheme.bodySmall?.color?.withValues(alpha: 0.5),
             ),
             filled: false,
-            contentPadding: EdgeInsets.symmetric(
-              vertical: AppSizes.size12,
+            contentPadding: widget.useRoundedBorder
+                ? EdgeInsets.all(AppSizes.size16)
+                : EdgeInsets.symmetric(vertical: AppSizes.size12),
+
+            // ✅ Conditional border styling
+            border: widget.useRoundedBorder
+                ? OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppSizes.radius8),
+              borderSide: BorderSide(color: borderColor),
+            )
+                : UnderlineInputBorder(
+              borderSide: BorderSide(color: borderColor),
             ),
-            border: UnderlineInputBorder(
+            enabledBorder: widget.useRoundedBorder
+                ? OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppSizes.radius8),
+              borderSide: BorderSide(color: borderColor),
+            )
+                : UnderlineInputBorder(
+              borderSide: BorderSide(color: borderColor),
+            ),
+            focusedBorder: widget.useRoundedBorder
+                ? OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppSizes.radius8),
               borderSide: BorderSide(
-                color: borderColor,
+                color: theme.colorScheme.primary,
+                width: 2,
               ),
-            ),
-            enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(
-                color: borderColor,
-              ),
-            ),
-            focusedBorder: UnderlineInputBorder(
+            )
+                : UnderlineInputBorder(
               borderSide: BorderSide(
                 color: theme.colorScheme.primary,
                 width: 2,
               ),
             ),
-            errorBorder: UnderlineInputBorder(
+            errorBorder: widget.useRoundedBorder
+                ? OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppSizes.radius8),
+              borderSide: BorderSide(color: theme.colorScheme.error),
+            )
+                : UnderlineInputBorder(
+              borderSide: BorderSide(color: theme.colorScheme.error),
+            ),
+            focusedErrorBorder: widget.useRoundedBorder
+                ? OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppSizes.radius8),
               borderSide: BorderSide(
                 color: theme.colorScheme.error,
+                width: 2,
               ),
-            ),
-            focusedErrorBorder: UnderlineInputBorder(
+            )
+                : UnderlineInputBorder(
               borderSide: BorderSide(
                 color: theme.colorScheme.error,
                 width: 2,
