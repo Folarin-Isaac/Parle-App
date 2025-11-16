@@ -6,6 +6,7 @@ import 'package:parle_app/constants/app_colors.dart';
 import 'package:parle_app/constants/app_sizes.dart';
 import 'package:parle_app/constants/app_strings.dart';
 import 'package:parle_app/constants/constants.dart';
+import 'package:parle_app/gen/assets.gen.dart';
 import 'package:parle_app/ui/common/onboarding/widgets/speech_bubble_button.dart';
 
 class CategorySelectionScreen extends StatefulWidget {
@@ -51,38 +52,27 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            // Main Content
             Padding(
               padding: EdgeInsets.all(AppSizes.size24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Logo
                   const AppLogo(),
-
                   Gap(AppSizes.size40),
-
-                  // Title
                   Text(
                     'You are a...',
                     style: theme.textTheme.displaySmall?.copyWith(
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-
                   Gap(AppSizes.size8),
-
-                  // Subtitle
                   Text(
                     'Kindly choose the appropriate category',
                     style: theme.textTheme.bodyMedium?.copyWith(
                       color: theme.textTheme.bodySmall?.color,
                     ),
                   ),
-
                   const Spacer(),
-
-                  // Student Bubble (Right side)
                   Align(
                     alignment: Alignment.centerRight,
                     child: SpeechBubbleButton(
@@ -94,8 +84,6 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
                   ),
 
                   Gap(AppSizes.size40),
-
-                  // Counsellor Bubble (Left side)
                   Align(
                     alignment: Alignment.centerLeft,
                     child: SpeechBubbleButton(
@@ -107,12 +95,10 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
                   ),
 
                   const Spacer(),
-
-                  // Illustration at bottom (placeholder)
                   SizedBox(
                     height: 85,
                     child: Image.asset(
-                      PNGImageUrl.illustration,
+                      Assets.images.illustration.path,
                       fit: BoxFit.fill,
                       height: AppSizes.size120,
                       width: AppSizes.size220,
@@ -131,12 +117,10 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
                     ),
                   ),
 
-                  Gap(AppSizes.size80), // Space for FAB
+                  Gap(AppSizes.size80),
                 ],
               ),
             ),
-
-            // Floating Action Button (Arrow)
             Positioned(
               bottom: AppSizes.size24,
               right: AppSizes.size24,
