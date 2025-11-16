@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parle_app/gen/assets.gen.dart';
 import 'package:parle_app/ui/common/auth/auth.dart';
 
 class EnterPinScreen extends StatefulWidget {
@@ -137,7 +138,7 @@ class _EnterPinScreenState extends State<EnterPinScreen> {
               SizedBox(
                 height: 85,
                 child: Image.asset(
-                  PNGImageUrl.illustration,
+                  Assets.images.illustration.path,
                   fit: BoxFit.fill,
                   height: AppSizes.size120,
                   width: AppSizes.size220,

@@ -1,18 +1,3 @@
-class SVGImageUrl {
-  SVGImageUrl._();
-
-  static const String google = 'assets/icons/google.svg';
-  static const String apple = 'assets/icons/apple.svg';
-  static const String facebook = 'assets/icons/facebook.svg';
-
-}
-
-class PNGImageUrl {
-  PNGImageUrl._();
-
-  static const String illustration = 'assets/images/illustration.png';
-
-}
 
 class JPGImageUrl {
   JPGImageUrl._();

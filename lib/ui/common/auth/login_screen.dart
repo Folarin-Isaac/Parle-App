@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parle_app/app/core/di/service_locator.dart';
 import 'package:parle_app/data/remote/auth/auth_service.dart';
+import 'package:parle_app/gen/assets.gen.dart';
 import 'package:parle_app/providers/user_provider.dart';
 import 'package:parle_app/ui/common/auth/auth_view_model.dart';
 import 'package:parle_app/ui/common/auth/register_screen.dart';
@@ -132,14 +133,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SocialLoginButton(
-                        svgAssetPath: SVGImageUrl.google,
+                        svgAssetPath: Assets.icons.google,
                         backgroundColor: AppColors.google,
                         iconColor: Colors.white,
                         onPressed: () {},
                       ),
                       Gap(AppSizes.size16),
                       SocialLoginButton(
-                        svgAssetPath: SVGImageUrl.apple,
+                        svgAssetPath: Assets.icons.apple,
                         backgroundColor: isDarkMode
                             ? AppColors.appleDark
                             : AppColors.apple,
@@ -148,7 +149,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       Gap(AppSizes.size16),
                       SocialLoginButton(
-                        svgAssetPath: SVGImageUrl.facebook,
+                        svgAssetPath: Assets.icons.facebook,
                         backgroundColor: AppColors.facebook,
                         iconColor: Colors.white,
                         onPressed: () {},
