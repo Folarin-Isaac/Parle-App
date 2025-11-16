@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "454798697385",
+    "project_id": "parleapp-bc476",
+    "storage_bucket": "parleapp-bc476.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454798697385:android:52bb3f857eb5ec967c1ab8",
+        "android_client_info": {
+          "package_name": "com.parleapp.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDapqpIUP1701j7YDTmMTIuWU9pkR2t1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

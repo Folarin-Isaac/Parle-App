@@ -14,6 +14,13 @@ class PNGImageUrl {
 
 }
 
+class JPGImageUrl {
+  JPGImageUrl._();
+
+  static const String splash = 'assets/images/splash.jpg';
+
+}
+
 class ErrorText {
   ErrorText._();
 
