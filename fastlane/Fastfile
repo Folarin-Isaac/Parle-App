@@ -1,0 +1,12 @@
+default_platform(:android)
+
+platform :android do
+
+  desc "Build a release APK"
+  lane :build_apk do
+    sh("flutter clean")
+    sh("flutter pub get")
+    sh("flutter build apk --debug")
+  end
+
+end
